@@ -9,6 +9,10 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'webhook-poc', '--image', 'gcr.io/$PROJECT_ID/webhook-poc', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
 # Step 3: Deploy container image to Cloud Run in us-east1 (South Carolina)
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'webhook-poc', '--image', 'gcr.io/$PROJECT_ID/webhook-poc', '--region', 'us-east1', '--platform', 'managed', '--allow-unauthenticated']
 # Step 4: Deploy container image to Cloud Run in us-west1 (Oregon)
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'webhook-poc', '--image', 'gcr.io/$PROJECT_ID/webhook-poc', '--region', 'us-west1', '--platform', 'managed', '--allow-unauthenticated']
 images:
 - gcr.io/$PROJECT_ID/webhook-poc
